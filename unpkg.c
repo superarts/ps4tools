@@ -494,7 +494,7 @@ int main(int argc, char *argv[])
 		fseek(in, entry_files[i].offset, SEEK_SET);
 		fread(entry_file_data, 1,  entry_files[i].size, in);
 
-		sprintf(dest_path, "%s%s%s", pkg_name, OS_SEPARATOR, entry_files[i].name);
+		sprintf(dest_path, "output-%s%s%s", pkg_name, OS_SEPARATOR, entry_files[i].name);
 
 		char *path = build_path(dest_path, '/', OS_SEPARATOR);
 		printf("%s\n", path);
